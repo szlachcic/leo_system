@@ -6,11 +6,10 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
 )
 
-catkin_package(
+catkin_package()
 
-)
+catkin_install_python(PROGRAMS 
+   	 scripts/leo_system.py
+	DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
-include_directories(
-# include
-  ${catkin_INCLUDE_DIRS}
-)
+
